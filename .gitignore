@@ -2,9 +2,11 @@
 *
 
 # Unignore all files with extensions recursively
-!**/*.*
+!*.*
+#Unignore all directory
+!*/
 
 # Unignore Makefiles recursively
-!**/Makefile
+!*/Makefile
 
 # other .gitignore rules...
