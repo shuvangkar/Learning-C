@@ -52,6 +52,9 @@ or you may optionally dereference the function pointer before calling the functi
 ## Function pointer as function parameter 
 Passing the pointer to another function is basically the same. See the example code for details. 
 
+
+## Callback function 
+
 ## Use of Function Pointer
 - Function pointer in c can be used to perform object oriented programming
 - function pointer allow user pass different type of action. like sort routine. you want to allow the caller to choose how sort operation will be performed.A much nicer way of allowing the user to choose how to sort the data is simply to let the user pass in a function to the sort function
