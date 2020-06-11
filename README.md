@@ -1,5 +1,6 @@
 ## Setup
-Linux is the easiest system to setup environments for C development 
+
+for C development Linux is the easiest OS to work with. 
 ```
 sudo apt-get install build-essentials 
 ```
@@ -28,7 +29,7 @@ int main(int argc, char *argv[])
 ```
 Then to build the code we will use a tool named **make**. 
 ```
-make hello.c
+make hello
 ```
 this will generate a executables named hello. To run the executables 
 ```
