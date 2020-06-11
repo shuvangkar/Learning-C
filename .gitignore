@@ -1,10 +1,10 @@
-# # Ignore all
-# *
+# Ignore all
+*
 
-# # Unignore all files with extensions recursively
-# !*.*
-# #Unignore all directory
-# !*/
+# Unignore all files with extensions recursively
+!*.*
+#Unignore all directory
+!*/
 
-# # Unignore Makefiles recursively
-# !**/Makefile
+# Unignore Makefiles recursively
+!**/Makefile
