@@ -1,6 +1,7 @@
 ## Function pointer
-
+In general, function pointers aren’t any more mysterious than data pointers: the main difference is that one references variables and the other references functions.
 ### Delcaration
+So the general pattern is: `returntype (*name)(parameters)`
 ```
 void (*funPtr)(int)
 ```
@@ -32,6 +33,11 @@ int main()
     (*funPtr)(3);         // Same result. Here * is optional.
     return 0;
 }
+```
+Note that a function call has higher precedence over dereferencing, so we need to use parentheses accordingly.
+```
+(*fptr)();
+// not *fptr();
 ```
 
 Invoke the function pointed to just as if you were calling a function.
