@@ -12,7 +12,16 @@ int (*ptr2_f[4])(int,int) = {NULL};
 
 int main()
 {
-    
+    func_array[0] = &add;
+    int result_add = func_array[0](2,5);
+    printf("Addition : %d \n",result_add);
+
+    func_array[1] = &sub;
+    int result_sub = func_array[1](20,3);
+    printf("Subtraction : %d \n",result_sub);
+
+    return 0;
+
 }
 
 
