@@ -11,16 +11,11 @@
 
 #include <stdint.h>
 
-/*
- * value read from GPIO port if button is pressed
- * depending on setup and wiring, button can be either active low and
- * reading 0 means pressed, or active high, and reading 1 means pressed
- */
-#define PRESSED 0
+
+#define PRESSED 0 //button is active low
 
 
-/* button handler type, pointer to function of type void foo(void) */
-typedef void (*button_handler_t)(void);
+typedef void (*button_handler_t)(void); //function pointer for button handler which will be provided by caller. 
 
 /*
  * struct to define a button, typedef'd to type button_t
@@ -28,32 +23,20 @@ typedef void (*button_handler_t)(void);
  * - define's the GPIO port and pin the button is attached to
  * - stores the current and last button states (pressed / released)
  * - contains the handler functions for each state
- *
  */
 typedef struct button {
-    /* GPIO data register */
-    volatile uint8_t *port;
-    /* GPIO pin */
-    uint8_t pin;
-    /* current button state, handled internally */
-    uint8_t state;
-    /* previous button state, handled internally */
-    uint8_t laststate;
-    /* handler function called when button is pressed, can be NULL */
-    button_handler_t press;
-    /* handler function called when button is released, can be NULL */
-    button_handler_t release;
+    volatile uint8_t *port;		///PORTx register pointer
+    uint8_t pin;				///button pin number
+    uint8_t state;				///current button state
+    uint8_t laststate;			///previous button state
+    button_handler_t press;		///button pressed handler function which will provided by user.(can be NULL)
+    button_handler_t release;	///handler function for button release. can be NULL
 } button_t;
 
-/*
- * initialize buttons with given data.
- */
-void buttons_init(button_t *data, uint8_t count);
 
-/*
- * read all button states and calls their handlers if state has changed
- */
-void buttons_poll(void);
+void buttons_init(button_t *data, uint8_t count); ///button initialize function
+
+void buttons_poll(void); //read all button states and calls their handlers if state has changed
 
 
 

@@ -18,7 +18,9 @@ void generic_release(void);
 
 
 /* our user-defined button setup data */
-button_t buttons[] = {
+button_t buttons[] = 
+{
+	//Such assignment supported after C99
     {
         /* first button, PC0 */
         .port = &PINC,
