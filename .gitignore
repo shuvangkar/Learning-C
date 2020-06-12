@@ -1,10 +1,42 @@
 # Ignore all
 *
+# Unignore Makefiles recursively
+# !*/Makefile
 
-# Unignore all files with extensions recursively
-!*.*
+#Build Directories
+[Dd]ebug/
+[Rr]elease/
+
+# Unignore c files
+!*.c
+
+#Unignore  h files
+!*.h
+
+#Unignore md file
+!*.md
+
+
+
 #Unignore all directory
 !*/
 
-# Unignore Makefiles recursively
-!**/Makefile
+
+
+# # Atmel studio
+
+# #Build Directories
+# [Dd]ebug/
+# [Rr]elease/
+
+# #Build Results
+# *.o
+# *.d
+# *.eep
+# *.elf
+# *.hex
+# *.map
+# *.srec
+
+# #User Specific Files
+# *.atsuo
