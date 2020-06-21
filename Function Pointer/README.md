@@ -1,5 +1,12 @@
 ## Function pointer
 In general, function pointers aren’t any more mysterious than data pointers: the main difference is that one references variables and the other references functions.
+```
+//a function taking two int arguments and returning an int 
+int function(int x, int y);
+
+//a pointer to such a function 
+int (*pointer)(int x, int y);
+```
 ### Delcaration
 So the general pattern is: `returntype (*name)(parameters)`
 ```
